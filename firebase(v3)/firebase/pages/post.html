@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style files/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" />
+    <title>Blood App</title>
+</head>
+<body style="background-image:url(../images/image.jpg); color:white;">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="../index.html">BLOOD APP</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="profile.html" onClick="pro()">your profile </a></li>
+            <li class="disabled"><a href="#">POST Ad</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li><a href="../pages/signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+            <li><a onClick="logout()" href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="text-center">Post AD</h1>
+      <hr>
+      
+      <br>
+      <div  class="col-md-6 col-md-offset-3 box">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input id="name" type="text" class="form-control" name="name" placeholder="name of donor/acceptor">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input id="phoneno" type="text" class="form-control" name="phoneNo" placeholder="enter number">
+          </div>
+          
+          <div>
+              <span>select type:</span>
+            <label class="radio-inline">
+                <input id="donor" type="radio" name="optradio" checked>donor
+              </label>
+              <label class="radio-inline">
+                <input id="acceptor" type="radio" name="optradio">acceptor
+              </label>
+          </div>
+          <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input id="type" type="text" class="form-control" name="type" placeholder="enter blood group">
+              </div>
+              <br>
+          <div class="text-right">
+              <button class="btn btn-primary" onClick="post()">Post  <div id="loader" class="loader"></div></button>
+          </div>
+      </div>
+    
+
+
+
+      
+      <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyBncyomgom5Vw1EW8LlNHqTuTL5TBr1v7Y",
+          authDomain: "authentication-4a266.firebaseapp.com",
+          databaseURL: "https://authentication-4a266.firebaseio.com",
+          projectId: "authentication-4a266",
+          storageBucket: "authentication-4a266.appspot.com",
+          messagingSenderId: "175163597713"
+        };
+        firebase.initializeApp(config);
+      </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="..\js files\app.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+      
+</body>
+</html>

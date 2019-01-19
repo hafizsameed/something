@@ -1,0 +1,34 @@
+{
+    "name": "blood app",
+    "short_name": "b app",
+    "theme_color": "red",
+    "background_color": "red",
+    "display": "standalone",
+    "start_url": "./index.html",
+    "icons": [{
+        "src": "./images/images.png",
+          "sizes": "128x128",
+          "type": "image/png"
+        }, {
+          "src": "./images/images.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }, {
+          "src": "./images/images.png",
+          "sizes": "152x152",
+          "type": "image/png"
+        }, {
+          "src": "./images/images.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        },
+        {
+          "src": "./images/images.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
+
+
+
+}
